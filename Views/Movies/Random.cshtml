@@ -1,0 +1,13 @@
+﻿@model AttributeRouting.ViewModels.RandomMovieViewModel
+@{
+    ViewBag.Title = "Random";
+}
+
+<h2>Random</h2>
+
+<h2>@Model.Movie.Name</h2>
+@foreach (var i in Model.Customers)
+{
+<h2>@i.Name</h2>
+}
+

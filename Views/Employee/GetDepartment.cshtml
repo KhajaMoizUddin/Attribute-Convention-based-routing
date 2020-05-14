@@ -1,0 +1,63 @@
+﻿@model IEnumerable<AttributeRouting.Models.Employee>
+@{
+    ViewBag.Title = "GetDepartment";
+}
+
+<h2>GetDepartment</h2>
+
+<h2>GetEmployeeByDId</h2>
+
+<hr>
+
+<h3>Employee Information Using Convention Routing</h3>
+<table>
+    <tr>
+        <th>@Html.DisplayNameFor(x => x.EmployeeId)</th>
+        <th>@Html.DisplayNameFor(x => x.EmployeeName)</th>
+        <th>@Html.DisplayNameFor(x => x.EmployeeDesignation)</th>
+        <th>@Html.DisplayNameFor(x => x.DateOfJoining)</th>
+        <th>@Html.DisplayNameFor(x => x.EmployeePhone)</th>
+        <th>@Html.DisplayNameFor(x => x.EmployeeGender)</th>
+        <th>@Html.DisplayNameFor(x => x.City)</th>
+        <th>@Html.DisplayNameFor(x => x.Project)</th>
+        <th>@Html.DisplayNameFor(x => x.CompanyName)</th>
+        <th>@Html.DisplayNameFor(x => x.DepartmentName)</th>
+        <th>@Html.DisplayNameFor(x => x.DepartmentId)</th>
+
+    </tr>
+
+    @foreach (AttributeRouting.Models.Employee employee in @Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(x => employee.EmployeeId)</td>
+            <td>@Html.DisplayFor(x => employee.EmployeeName)</td>
+            <td>@Html.DisplayFor(x => employee.EmployeeDesignation)</td>
+            <td>@Html.DisplayFor(x => employee.DateOfJoining)</td>
+            <td>@Html.DisplayFor(x => employee.EmployeePhone)</td>
+            <td>@Html.DisplayFor(x => employee.EmployeeGender)</td>
+            <td>@Html.DisplayFor(x => employee.City)</td>
+            <td>@Html.DisplayFor(x => employee.Project)</td>
+            <td>@Html.DisplayFor(x => employee.CompanyName)</td>
+            <td>@Html.DisplayFor(x => employee.DepartmentName)</td>
+            <td>@Html.DisplayFor(x => employee.DepartmentId)</td>
+
+        </tr>
+
+    }
+
+</table>
+
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 4px;
+    }
+</style>
+
